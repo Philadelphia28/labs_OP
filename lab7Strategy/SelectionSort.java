@@ -3,6 +3,10 @@ package lab7Strategy;
 public class SelectionSort implements Sorting{
 	@Override
 	public void doSorting(short[] arr) {
+		if (arr.length == 0) {
+			throw new IllegalArgumentException("Error! Array is empty!");
+		}
+
 		int n = arr.length;
 		for (int i = n - 1; i >= 0; i--)
 		{
